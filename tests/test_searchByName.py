@@ -3,14 +3,14 @@
 # setup.py that excludes installing the "tests" package
 
 import unittest
+from src.sample.SearchByName import *
 
-from sample.simple import add_one
 
+class TestSearchByName(unittest.TestCase):
 
-class TestSimple(unittest.TestCase):
-
-    def test_add_one(self):
-        self.assertEqual(add_one(5), 6)
+    def test_get_successful_status_code_200(self):
+        self.search = SearchByName("Arrabiata")
+        self.assertEqual(self.search.get_status_code(), 200)
 
 
 if __name__ == '__main__':
