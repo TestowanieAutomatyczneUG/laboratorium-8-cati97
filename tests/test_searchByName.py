@@ -13,7 +13,7 @@ class TestSearchByName(unittest.TestCase):
         self.assertEqual(self.search.check_if_correct_meal(), True)
 
     def test_get_incorrect_meal(self):
-        self.search = SearchByName("Sandwic")
+        self.search = SearchByName("Sa")
         self.assertEqual(self.search.check_if_correct_meal(), False)
 
 
