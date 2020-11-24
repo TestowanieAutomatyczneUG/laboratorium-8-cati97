@@ -12,6 +12,10 @@ class TestSearchByName(unittest.TestCase):
         self.search = SearchByName("Arrabiata")
         self.assertEqual(self.search.check_if_correct_meal(), True)
 
+    def test_get_incorrect_meal(self):
+        self.search = SearchByName("Sandwic")
+        self.assertEqual(self.search.check_if_correct_meal(), False)
+
 
 if __name__ == '__main__':
     unittest.main()
