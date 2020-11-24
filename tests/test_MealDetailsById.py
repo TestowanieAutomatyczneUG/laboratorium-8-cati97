@@ -2,7 +2,7 @@ import unittest
 from src.sample.MealDetailsById import *
 
 
-class TestSearchByName(unittest.TestCase):
+class TestMealDetails(unittest.TestCase):
 
     def test_get_successful_status_code_200(self):
         self.search = MealDetailsById(52772)
