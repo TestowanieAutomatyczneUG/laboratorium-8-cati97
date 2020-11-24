@@ -12,6 +12,10 @@ class TestMealDetails(unittest.TestCase):
         self.search = MealDetailsById(52772)
         self.assertEqual(self.search.check_if_correct_meal(), True)
 
+    def test_check_correct_id_false(self):
+        self.search = MealDetailsById(251)
+        self.assertEqual(self.search.get_status_code(), 200)
+
 
 if __name__ == '__main__':
     unittest.main()

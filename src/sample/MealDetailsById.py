@@ -11,5 +11,3 @@ class MealDetailsById:
     def check_if_correct_meal(self):
         if str(self.id) == self.r.json()['meals'][0]['idMeal']:
             return True
-        else:
-            return False
